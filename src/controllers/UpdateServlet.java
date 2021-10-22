@@ -44,7 +44,7 @@ public class UpdateServlet extends HttpServlet {
             String content = request.getParameter("content");
             t.setContent(content);
 
-            Timestamp current = new Timestamp(System.currentTimeMillis());
+            Timestamp currentTime = new Timestamp(System.currentTimeMillis());
             t.setUpdated_at(currentTime); //更新日時のみ上書き
 
             //データベースを更新
